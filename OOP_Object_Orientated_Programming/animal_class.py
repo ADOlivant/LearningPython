@@ -28,7 +28,7 @@ class Animal:
 	#animal
 	def report(self): 
 		#return a dictionary containing the type, growth, and days growing
-		return {'type': self._type, 'status':self._status, 'weight':self._weight, 'days growing':self._days_growing}
+		return {'name': self._name, 'type': self._type, 'status':self._status, 'weight':self._weight, 'days growing':self._days_growing}
 
 	#the underscore indicates that this method should not be called from out with 
 	#the class
@@ -52,6 +52,9 @@ class Animal:
 		self._days_growing += 1
 		#update the status
 		self._update_status()
+
+	def name_animal(self,name): 
+		self._name = name
 
 def auto_grow(animal,days):
 	#grow the animal 
